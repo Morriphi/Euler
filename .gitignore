@@ -1,0 +1,42 @@
+# IntelliJ
+*.iws
+.idea/*
+.idea_modules/*
+
+# TextMate
+*.tmproj
+
+# sbt
+target/
+artifacts/
+project/boot/
+project/target/
+lib_managed/
+
+# other stuff
+*.pyc
+.*.swp
+*.log
+*~
+*.class
+
+# mac
+.DS_Store
+
+# openam logs
+logs/
+
+# non-shared vagrant vms
+ops/envs/ganglia_server
+
+# some other random files
+.directory
+.sass-cache
+
+# capenvs, capistrano environments definition
+capenvs
+
+# temp files
+mock-openam-tools/*
+
+# annoying files
