@@ -13,4 +13,8 @@ class EulerTest extends FunSpec with ShouldMatchers {
     def fib(x: Int, y: Int) : Stream[Int] = x #:: fib(y, x+y)
     println(fib(1, 2).takeWhile(_ < 4000000).filter(_ % 2 == 0).sum)
   }
+
+//  it("Problem 3 - Largest Prime Factor of 600851475143") {
+//    fail
+//  }
 }
