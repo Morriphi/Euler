@@ -15,20 +15,11 @@ class PrimeFactorsTest extends FunSpec with ShouldMatchers {
     9 -> List(3, 3))
     .foreach(runTest)
 
-  def generate(n: Int): List[Int] = {
-    def f(n: Int, candidate: Int): List[Int] = {
-      if (n <= 1) List()
-      else if (n % candidate == 0) candidate :: f(n / candidate, candidate)
-      else f(n, candidate+1)
-    }
-    f(n, 2)
-  }
-
   def runTest(map: (Int, List[Int])) = {
     val n = map._1
     val primes = map._2
     it(s"Prime factors of $n should be $primes") {
-      generate(n) should be(primes)
+      PrimeFactorsOf(n) should be(primes)
     }
   }
 }
